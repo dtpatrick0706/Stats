@@ -1,4 +1,40 @@
 Chapter 7
+7.1 Introduction
+
+1.) Point Estimation
+	Definition - Let θ represent an arbitrary parameter of a population. It can be, for example, the population
+	mean µ or the population proportion p. The objective of point estimation is to find a function
+	of data that can provide a reasonable estimate of θ. Such a function is called a point estimator,
+	denoted by 𝜃̂. A point estimate is simply a specific value of a point estimator.
+
+example 1
+Example: The parameter of interest is the true average lifetime of certain car batteries. A
+random sample of n=5 batteries yields the following lifetimes (years)
+X1=5, X2=4, X3=4.5, X4=4.2, X5=3.8.
+The parameter is µ. The most reasonable estimator and estimate are:
+Estimator 𝜇̂= 𝑋̅, and estimate 𝑥̅= 4.3 years.
+
+2.) Unbiased Estimators
+	Q:  We can propose several different estimators for a given parameter. For example, both
+	sample mean and sample median are reasonable estimators of population mean. How do we
+	choose which estimator to use for estimating the population parameter in a given situation?
+
+	Definition: If a sample statistics has a mean equal to the population parameter the statistic is
+	intended to estimate, that is, E(𝜃̂)=θ, the statistic is said to be an unbiased estimator of the
+	parameter. Otherwise, the statistic is said to be a biased estimator, and the difference E(𝜃̂) – θ
+	is called the bias of 𝜃̂.
+example 1
+Suppose X, the number of successes, has a binomial distribution with parameters n
+and p. Then, the sample proportion X / n is an unbiased estimator of p.
+		
+example 2
+Show that the usual sample variance S 2 is an unbiased estimator for the population variance σ^2, 
+but the intuitive estimator 𝜎̂^2 = 1/n ∑(𝑋𝑖 − 𝑋̅)^2 is biased.
+
+3.) Variance of a Point Estimator 
+	
+7.2 Single Sample: Estimating the Mean
+
 
 2) Confidence Level, Precision, and Sample Size
 	- For a fixed sample size, the higher the confidence level, the wider the resulting
@@ -7,10 +43,10 @@ Chapter 7
 	  the precision of the estimation.
 	- The half-width of a confidence interval is called sampling error (or margin of error,
 	  or maximum error of estimate) or the bound on the error of estimation
-	- If sample mean X�is used as an estimate of U, we can be 100(1-a)% confident that
+	- If sample mean X¯is used as an estimate of U, we can be 100(1-a)% confident that
 	  the error will not exceed... 
 						Za/2 a/vn
-	- If sample mean X�is used as an estimate of U, we can be 100(1-a)% confident that
+	- If sample mean X¯is used as an estimate of U, we can be 100(1-a)% confident that
 	  the error will not exceed a specific amount SE when the sample size is
 						n =
 Note:
@@ -20,7 +56,7 @@ Note:
 			
 			90% confidence interval for N.
 				(6.19,6.90)
-			Interpertation. We're 90% confident that _____ falls in the interval _____.
+			Interpertation. We are 90% confident that _____ falls in the interval _____.
 
 example 1
 Suppose we wish to estimate the average age of the students at YSU. How
@@ -36,7 +72,7 @@ ages is known to be 3 years.
 
 	a) We can say with 95% confidence that the average age falls between 22 and 24 years.
 		TRUE
-	b) We are highly confident that 95% of YSU students� age falls in the interval.
+	b) We are highly confident that 95% of YSU students’ age falls in the interval.
 		FALSE
 	c) We can say with 95% confidence that the confident interval (22, 24) contains the true
 	   population mean.
@@ -44,9 +80,9 @@ ages is known to be 3 years.
 example in class:
 
 sample 1 <--------------->
-	   22              24
+	 22             24
 sample 2 -<------------->-			## This will be done many times ##
-							## Confidence level will cover said % ##
-sample 3 -<-------->------	      	## Interval is centered at mean ##	
+						## Confidence level will cover said % ##
+sample 3 -<-------->------	      		## Interval is centered at mean ##	
 							
 sample 2000...					
