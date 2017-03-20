@@ -85,4 +85,35 @@ sample 2 -<------------->-			## This will be done many times ##
 						## Confidence level will cover said % ##
 sample 3 -<-------->------	      		## Interval is centered at mean ##	
 							
-sample 2000...					
+sample 2000...		
+	
+Section 7.3 
+1. Independent Samples
+	Recall: Let 𝑋̅1 represent the mean of a random sample of size 𝑛1 selected from the population
+	with mean 𝜇1 and variance 𝜎^2, and 𝑋̅2 represent the mean of a random sample of size 𝑛2
+	selected from the population with mean 𝜇2 and variance 𝜎22. If the two samples are independent and both 𝑛1 and 𝑛2 are 
+	sufficiently large, then the sampling distribution of the differences of means, 𝑋̅1 - 𝑋̅2, is approximately 
+	normal with mean and variance given by
+			𝜇 (𝑋̅1-𝑋̅2) = 𝜇1-𝜇2 and 𝜎^2(𝑋̅1-𝑋̅2) = 
+Formula:
+population 1 (𝜇1 , 𝜎^2)			population 2 (𝜇2 , 𝜎^2)
+parameter (𝜇1 - 𝜇2)				
+Sample 1 with size of n,
+	(𝑋̅1 , S^2)	[𝑋̅1 - 𝑋̅2]	
+Independent Sampling 
+	𝑋̅1 ~ N(𝜇1 , 𝜎^2/n1)
+	𝑋̅2 ~ N(𝜇2 , 𝜎^2/n2)
+If 𝑋̅1 and 𝑋̅2 are independent then 𝑋̅1- 𝑋̅2 ~ N(𝜇1 - 𝜇2 , 𝜎^2/n1 + 𝜎^2/n2)			
+	
+A (100 - a)% C.I. for 𝜇1  - 𝜇2 is (𝑋̅1- 𝑋̅2) +- Z * sqrt(𝜎^2/n1 + 𝜎^2/n2)			## Z value is still from chart ##
+
+emaple 1
+A study was conducted in which two types of television picture tubes, one from manufacturer A and the other from 
+manufacturer B , were compared. The average lifetime of a random sample of 36 tubes from manufacturer A was 
+found to be 7.5 years with a sample variance .9 years, and the average lifetime of a random sample of 49 tubes from manufacturer
+B was found to be 7 years with a sample variance .8 years. Find a 95% confidence interval on the difference between two 
+population means, 𝜇𝐴 − 𝜇𝐵.
+	n1 = 36, 𝑋̅1 = 7.5, 𝜎^2 = .9			## n values are sample size, 𝑋̅ are interperting variables, and 𝜎^2 is S.D. ## 
+	n2 = 49, 𝑋̅2 = 7 , 𝜎^2 = .8			
+	A 95% C.I. for 𝜇1 - 𝜇2 is between (.1 , .9)
+	
