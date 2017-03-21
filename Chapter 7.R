@@ -24,8 +24,8 @@ Estimator 𝜇̂= 𝑋̅, and estimate 𝑥̅= 4.3 years.
 	parameter. Otherwise, the statistic is said to be a biased estimator, and the difference E(𝜃̂) – θ
 	is called the bias of 𝜃̂.
 example 1
-Suppose X, the number of successes, has a binomial distribution with parameters n
-and p. Then, the sample proportion X / n is an unbiased estimator of p.
+Suppose X, the number of successes, has a binomial distribution with parameters n	## Population Standard Deviation use Z ##
+and p. Then, the sample proportion X / n is an unbiased estimator of p.			## Sample Standard Deviation use T ##
 		
 example 2
 Show that the usual sample variance S 2 is an unbiased estimator for the population variance σ^2, 
@@ -107,7 +107,7 @@ If 𝑋̅1 and 𝑋̅2 are independent then 𝑋̅1- 𝑋̅2 ~ N(𝜇1 - 𝜇2 ,
 	
 A (100 - a)% C.I. for 𝜇1  - 𝜇2 is (𝑋̅1- 𝑋̅2) +- Z * sqrt(𝜎^2/n1 + 𝜎^2/n2)			## Z value is still from chart ##
 
-emaple 1
+examaple 1
 A study was conducted in which two types of television picture tubes, one from manufacturer A and the other from 
 manufacturer B , were compared. The average lifetime of a random sample of 36 tubes from manufacturer A was 
 found to be 7.5 years with a sample variance .9 years, and the average lifetime of a random sample of 49 tubes from manufacturer
@@ -116,4 +116,60 @@ population means, 𝜇𝐴 − 𝜇𝐵.
 	n1 = 36, 𝑋̅1 = 7.5, 𝜎^2 = .9			## n values are sample size, 𝑋̅ are interperting variables, and 𝜎^2 is S.D. ## 
 	n2 = 49, 𝑋̅2 = 7 , 𝜎^2 = .8			
 	A 95% C.I. for 𝜇1 - 𝜇2 is between (.1 , .9)
+	
+example 2						##  Both 𝝈𝟏 and 𝝈𝟐 are unknown ##
+A 100(1-α)% confidence interval for 𝜇1- 𝜇2 when both samples are large or both population distributions are normal, 
+and both population variances 𝜎1 and 𝜎2 are unknown is given by
+							## In this case Z is replaced with T and 𝜎1 and 𝜎2 are replaced with S ##
+A study was conducted in which two types of television picture tubes, one from
+manufacturer A and the other from manufacturer B , were compared. The average lifetime of a
+random sample of 36 tubes from manufacturer A was found to be 7.5 years with a sample
+variance .9 years, and the average lifetime of a random sample of 49 tubes from manufacturer
+B was found to be 7 years with a sample variance .8 years. Find a 95% confidence interval on
+the difference between two population means, 𝜇𝐴 − 𝜇𝐵.
+
+Sample 1 (A) 			Sample 2 (B)
+	n = 36			n = 49
+	𝑋̅1 = 7.5		  𝑋̅1 = 7
+	S1 = .9			S2 = .8
+ 𝜇1 = S1/n1 = .9/36 = .025				## First calculate  𝜇  values ##
+ 𝜇2 = S2/n2 = .8/49 = .1063
+Plug in to your T formula 				## Need to rearrange formula to solve for V ## 
+	A: 72.68
+In R 
+	qt (.975, 72.69) = 6.993145
+Then we find the confidence interval
+A 95% C.I. for  𝜇1 -  𝜇2 is 
+	(7.5 -7) +- 2 * sqrt(.025+.0163)		## Same formula we have been using for Confidence Interval ##
+	= .5 +- .41 = (.09 , .91)
+
+------- ## Note ## -------------------------------------------------------------------------------------------------------------------- 
+	When n1 and n2 are large (>= 30) V ~ n1 + n2 -2    ## Just an approximation ##
+	In above Example, V ~ 36 + 49 -2 = 83
+	In R:
+		qt(.975 , 83) = 6.98896   		## Very close to our exact answer from earlier ##
+----------------------------------------------------------------------------------------------------------------------------------------
+In calss example	(𝜇1)		(𝜇2) 		  ## Weight loss program, initial weight and ending weight ##
+	Subjects 	Before		After
+	1		150		145		## Was the program effective? ##
+	2		175		172		## In this example it is dependent sampling, The results before and after are  
+	.		.		.		## not independent of each other ##
+	.		.		.
+	.		.		.
+	50		200		198
+	
+C.I. for (𝜇1 - 𝜇2)
+	if between (1.2 , 3.4) then program is successful
+	also could say successful if (𝜇1 - 𝜇2) > 0		## Can no longer say that 𝑋̅1 - 𝑋̅2 ~N because not independent ##
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
