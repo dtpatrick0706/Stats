@@ -27,7 +27,7 @@ to know if the average wasted time for his employees is more than the reported 2
 		H0 = 120	H1 = µ > 120
 
 	- Select the null hypothesis which usually has the form µ = value.
-
+	
 Suppose a random sample of 32 employees was selected and each person was asked about
 daily wasted time at work. The mean wasted time of these 32 workers was found to be 135
 minutes.
@@ -92,7 +92,7 @@ Section 8.2 Single Sample: Testing a Population mean
 |	µ ≠ µ0			|	       z > zα/2 or z < -zα/2	|
 -------------------------------------------------------------------------
 --------------------------------------------------------------------------------
-| 			Rejection Region					|
+| 				Rejection Region				|
 |-------------------------------------------------------------------------------
 |	 |	Upper-tailed 	|  Lower-tailed    |	Two-sided		|
 |α = .01 |      z > 2.33        |     z < -2.33    |	z > 2.575 or z < -2.575 |
@@ -100,8 +100,35 @@ Section 8.2 Single Sample: Testing a Population mean
 |α = .1  |      z > 1.28 	|     z < -1.28    |	z > 1.645 or z < -1.645 |
 ---------------------------------------------------------------------------------
 
+example 1
+Suppose a random sample of 32 employees was selected and each person was
+asked about daily wasted time at work. The mean wasted time of these 50 workers was found
+to be 135 minutes. Assume that the daily wasted time of employees has a normal distribution
+with σ = 35 minutes. At α = .05, can it be concluded that the mean wasted time of the
+employees from this CEO’s company is more than the reported 120 minutes? What is β(130),
+the probability of a Type II error when µ = 130?
 
+X = 135 	n = 32 		𝝈 = 35
+Step 1) H0: µ =120, H1: >120
+Step 2) Z = (135-120)/(35/sqrt(32)) = 2.42
+Step 3) rejection region is: Z > 1.645
+Step 4) Reject H0 at α = .05 Since the test statistic falls into the rejection region.
+	## Conclusion - Sufficient evidence to conclude that the mean wasted time of all employeees is more ##
+	## than two hours ##
+		
+example 2
+A magazine article stated that the average age of women who are getting married
+for the first time is 28 years. A researcher believed that the average age should be younger
+than 28. To test the claim, she selected a sample of 35 women who were recently married for
+the first time and found the average was 27.1 years. Suppose that the population distribution is
+normal with a standard deviation 3.2 years. At α = .1, is the average age really less than 28?
 
-   
+X = 27.1 	n = 35		𝝈 = 3.2	α = .1
+Step 1) H0: µ = 28, H1: µ < 28
+Step 2) The test statistic Z = (27.1 - 28)/(3.2/sqrt(35)) = -1.66
+Step 3) Rejection region is Z < -1.28
+Step 4) Reject H0 at α = .1
+   	## Conclusion - Suffieicent evidence to support the researchers claim that the average age is younger ##
+	## than 28 years ##
 
 
