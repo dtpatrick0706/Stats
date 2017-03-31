@@ -1,7 +1,9 @@
 Chapter 8
 One and Two Sample Tests of Hypotheses 
+---------------------------------
+|Section 8.1 Introduction	|
+---------------------------------
 
-Section 8.1 Introduction
 1.) A statistical hypothesis is a statement/claim about a population parameter.
 	- The null hypothesis is denoted by H0 and it is usually stated as
 	  H0 : parameter = a specific value. For example, H0 : µ = 450.
@@ -74,9 +76,10 @@ NOTE:
 	  support H1” or “insufficient evidence to support H1”		## Answer is always worded in terms of H0. Decision is ##
 									## either reject or fail to reject. Then conclusion ##
 	- In hypotheses testing, we will never accept the null hypothesis being true.					
-------------------------------------------------------------------------------------------------------
-Section 8.2 Single Sample: Testing a Population mean
-
+---------------------------------------------------------
+|Section 8.2 Single Sample: Testing a Population mean	|
+---------------------------------------------------------
+	
 	Null Hypothesis : H0: µ = µ0
 1.) The case of 𝝈 known
 	"Critical Method": 
@@ -131,4 +134,75 @@ Step 4) Reject H0 at α = .1
    	## Conclusion - Suffieicent evidence to support the researchers claim that the average age is younger ##
 	## than 28 years ##
 
+2.) The case of 𝝈 unknown
+When either n is large or the population distribution is approximately normal, to test H0 : µ = µ0
+	The test statistic is t= (𝑥̅−𝜇0)/(𝑠/√n) ~ tn-1
+where 𝑥̅ is the sample mean, n is the sample size, µ0 is the symbol for the numerical value
+assigned to µ under H0
+	
+			C-V method		p-value
+H1: 𝜇 > 𝜇0	  	  t > tn-1, α		  P(tn-1>t0)
+H1: 𝜇 < 𝜇0 	  	  t <- tn-1,α		  P(tn-1<t0)
+H1 : µ ≠ µ0     	t > tn-1,α/2 or t < - tn-1,α/2
 
+example 1
+An automobile manufacturer who wishes to advertise that one of its models achieves
+30 mph decides to carry out a fuel efficiency test. 40 nonprofessional drivers are selected, and
+each one drives a car from Chicago to Los Angeles. The test results in a mean fuel efficiency
+of 30.4 mph and a standard deviation of 2.2 mph.. At α = .05, do the data support the claim
+that the true average fuel efficiency is at least 30 mph.
+
+X = 30.4, S = 2.2, n = 40					c- v method
+H0: 𝜇 = 30	H1: 𝜇 > 30					  Rejection region: t > t39.05 = 1.684    ## T chart (40, .05)
+								1.15 < 1.684 therefore we fail to reject H0 at  α = .05.
+the test statistic t= (30.4 -30) / (2.2/√40) = 1.15		## Insufficient evidence to support the claim that the mean fuel ##
+								## efficiency is at least 30 mph ##
+P - value method
+p-value = P(t39 > 1.15)
+.1 < P(t40 > 1.15) < .15		## Our value lies between .1 and .15 on the t chart ##
+	in R: 1 - Pt (1.15, 39) = .1286
+---------------------------------------------------------	
+|Section 8.3 Two Samples: Tests on Two Means 		|
+---------------------------------------------------------
+
+1) Independent Sampling
+Assumption:
+	-Two samples are independent.
+	-Population variance is unknown.
+	-Either population in normal or sample size is large.
+Hypotheses: H0 : 𝜇1 − 𝜇2 = D0		vs		H1 : 𝜇1 − 𝜇2 > (<, ≠) D0
+	where D0 is the hypothesized difference between the means and it is usually equal to 0
+			 t = ((𝑥̅1−𝑥̅2)−𝐷0) / √(S1^2/n1)+(s2^2/n2) ~ tv under H0.
+example 1
+ Each person in a random sample of 200 male teenagers and a random sample of 300
+female teenagers was asked how many hours he or she spent online in a typical week. The
+sample mean and standard deviation were 15.5 hours and 11 hours for males and 14.1 hours
+and 11.2 hours for female.
+	
+	𝜇1: mean amount of hours spent online for males.		## population means that are unkown ##
+	𝜇2: mean amount of hours spent online for females.
+n1 = 200	𝑥̅1 = 15.5	S1 = 11    				## male ##
+n2 = 300	𝑥̅2 = 14.1	S2 = 11.2				## female ##
+	
+a. Construct and interpret a 95% C.I. for the difference in mean number of hours spent on
+line for male teenagers and female teenagers.
+	95% C.I. for 𝜇1 - 𝜇2
+(𝑥̅1−𝑥̅2) +- tv  √(S1^2/n1)+(s2^2/n2) 		## v ~ 200+300 -2 = 498 ##
+(15.5 - 14.2) +- 1.964 √(11^2/200)+(11.2^2/300)
+		(1.4+- 1.98)
+	or	(-.58, 3.38)
+
+b. At α = .05, carry out a test to determine if there is convincing evidence that the mean
+number of hours spent online in a typical week is greater for male teenagers than for
+female teenagers.
+	H0:𝜇1 − 𝜇2 =0 , H1: 𝜇1 − 𝜇2 > 0			## D0 is set to 0 because we just need to know that it is greater ##
+the t.s 	t = (1.4-0)/1.01 = 1.39
+the rejection region: t > tv, .05 = 1.645
+Fail to reject H0 at α = .05
+	
+	
+
+	
+	
+	
+	
