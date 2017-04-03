@@ -200,8 +200,51 @@ the t.s 	t = (1.4-0)/1.01 = 1.39
 the rejection region: t > tv, .05 = 1.645
 Fail to reject H0 at α = .05
 	
-	
+## Note -  For hypotheses with 𝜇1 − 𝜇2 = 0, if the confidence interval for 𝜇1 − 𝜇2 contains 0, ##
+## then it is possible for the difference between the population means to be 0. In this case, we ##
+## cannot conclude there exists a significant difference between 𝜇1 and 𝜇2, that is, we cannot ##
+## reject H0. On the other hand, if the C.I. for 𝜇1 − 𝜇2 does not contain 0, we can conclude there ##
+## exists a significant difference between 𝜇1 and 𝜇2.	##
 
+2) Paired Sampling
+Assumptions:
+	- Samples are paired
+	- The n sample differences can be viewed as a random sample from a population of
+	  differences.
+	- Population variance is unkown
+	- The number of sample differences is large or the population distribution of differences is
+	  approximately normal.
+
+Recall: Under the assumptions, the quantity t = (𝑥̅𝑑−𝜇𝑑) / (𝑠𝑑/√n) follows a t distribution with df = n-1,
+	where 𝑥̅𝑑 and 𝑠𝑑 are the mean and standard deviation of the sample differences, and 𝜇𝑑 = 𝜇1 − 𝜇2.
+	
+	The Paired t Test about 𝜇𝑑:
+	H0 : 𝜇𝑑= D0 vs H1 : 𝜇𝑑> (<, ≠) D0
+test statistic t = (𝑥̅𝑑−𝐷0) / (𝑠𝑑/√𝑛)
+
+example 1
+Students are weighed (in kilograms) at the beginning and the end of a semester-long
+health-fitness program. Let the random variable D equal the weight change for a student,
+postweight minus preweight. Assume that the distribution of D is N(𝜇𝑑, σd). A random sample
+of n=12 students yielded the following results: 𝑥̅𝑑= -.45, 𝑠𝑑= .1.
+	
+a. Construct a 95% C.I. for µd
+	 𝑥̅𝑑= -.45	𝑠𝑑= .1	n = 12
+(µ1 - µ2)
+-.45 +- t * (.1/√12)
+-.45 +- 2.201 (.1/√12)
+-.45 +- .06 or (-0.51,-0.39)
+
+b. Conduct a test at α =.05 to see if the program is effective?
+	H1: µd < 0
+	## We will reject H0 because our confidence interval does not contain 0. ##
+test statistic t = (-0.45 -0) / (.1/√12) = -15.59
+		the rejection region t < -tα,n-1
+				     t < -1.796  
+
+	
+	
+	
 	
 	
 	
