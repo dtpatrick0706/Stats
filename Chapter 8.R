@@ -243,7 +243,80 @@ test statistic t = (-0.45 -0) / (.1/√12) = -15.59
 				     t < -1.796  
 
 	
-	
+
+Test Review
+
+R commander is a comprehensive suite of functions for R
+>To install
+install.packages("Rcmdr", dependencies = TRUE)
+
+>To open
+library("Rcmdr")
+
+Example HW Problem R Code
+P283 #11
+
+x=1.006
+s=.0245
+n=9
+
+A %99 c.i for u is
+1.006 +- ta/2,n-1(.0245/(sqrt(9)))
+1.006 +- 3.355 (.0245/(sqrt(9)))
+1.006 +- .027
+(.979, 1.033)
+
+Point estimate would be 1.006
+
+If asked to decrease the width of the confidence interval by half
+n = (((za/2)s)/SE)^2
+  =(2.575(.0245))/.0133) SE = ((1.033-1.006)/2) <--- to half the SE for the interval find the distance between the x and upperbound and divide by 2
+
+Script:
+diameter=c.(1.07,.97,1.03,1.04,.99,.98,.99,1.01,1.03)
+mean(diameter) <---- 1.00556
+sd(diameter) <---- .02455153
+t.test(diameter, alternative="two.sided",conf.level=.99) <---- no z test in r, alternative="two-sided" represents the confidence , conf.level sets which confidence level
+                                                                    you want, can also set confidence interval to greater or less, you can also add mu after alternative
+
+Pg 295 #45?
+Paired design (two varieties from the same university)
+
+
+Script:
+x1=c(38,23,35,41,44,29,37,31,38)
+x2=c(45,25,31,38,50,33,36,40,43)
+t.test(x1,x2,alternative="two.sided",paired=T)
+t.test(x1,x2,alternative="two.sided",mu=0,paired=T) <---alt hypothesis: true difference in means is greater than 0
+
+95% confidence interval for mu1-mu2
+(-6.2955948,0.7400393)
+
+95% confidence for mu=0
+-5.614525
+
+
+More script for differences <--- if asked on the test you need this
+d=x1-x2
+mean(d)
+sd(d)
+
+xd = -2.78 <---- mean of sample
+sd = 4.58 <---- standard deviation of sample
+
+A 95% c.i for mu1-mu2(=md)
+-2.78+-ta/2,n-1(4.58/sqrt(9))
+-2.78+-2.306(4.58/3)
+-2.78+-3.52
+(-6.2, .74) <---- very close to t.test except differences due to rounding errors
+
+
+Another example
+x1=36300 s1 = 5000, n1 = 12
+x2=38100 s2 = 6000, n2 = 12
+A 95% c.i. for m1-m2
+(x1 - x2) +- ta/2v(sqrt(s1^2/n1 + s2^2/n2)) <----- v1 = s1^2/2  v2 s2^2/2 v=(v1+v2)/(v1^2/n1-1 + v2^2/n2-1)
+
 	
 	
 	
