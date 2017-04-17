@@ -63,6 +63,76 @@ It can be used for testing if a qualitative variable has aspecific distribution.
   Reject H0 at α = .05
  
 
+Section 9.2 Tests for Homogeneity and Independence in a Two-Way Table
+  
+  1. Chi-Squared Test of Homogeneity
+This test is applied to a single categorical variable from two or more populations. It is used to determine whether 
+frequency counts are distributed identically across populations.
+  
+ example
+  In a study of living conditions for college students, 450 undergraduate students were selected and classified 
+ according to class standing and living conditions. Use the data in the table to determine if the proportions 
+ falling into each of the four response categories are not the same for students with different class standing.
+  
+ 
+ 
+ 
+ 
+ 
+ 2. A chi-squared independence test
+A chi-squared independence test is used for investigating association between two
+categorical variables in a single population.
+  
+example
+ A researcher randomly selected 1000 death certificates and found the following information about the deceased:
+  
+---------------------------------------------------------------------------------------
+|  Smoking Habits |                   Cause of Death              |     Row Total     |
+|                 |-----------------------------------------------|                   |
+|                 |     Cancer    |   Heart Disease   |   Other   |                   |
+---------------------------------------------------------------------------------------
+|  Smoker         |      145      |        300        |    205    |         650       |
+---------------------------------------------------------------------------------------
+|  NonSmoker      |       50      |        160        |    140    |         350       |
+---------------------------------------------------------------------------------------
+| Column Total    |      195      |        460        |    345    |        1000       |
+---------------------------------------------------------------------------------------
+  
+  At a significance level of 5%, do these data show that smoking and cause of death are dependent?
+
+  H0 = independent            ## for chi squared independent test hypothesis is always equal to this
+  H1 = dependent
+  
+  The Test Statistic:
+         χ2 = ∑ (o-e)2 / e    =     (650/1000) x (195/1000)
+         P( Smoker ∩ Cancer )             ## Expected number of smokers who died of cancer = 1000 x  (650/1000) x (195/1000)
+         = P(Smoker) x P(Cancer)
+  
+  smoker cancer = 126.75
+  smoker Heart Disease = 299
+  Smoker Other = 224.25
+  Non Smoker Cancer = 68.25
+  NonSmoker Heart Disease = 161
+  NonSmoker Other = 120.75
+            = (145 - 126.75)2 / 126.75 +..... + (140-120.75)2 / 126.75
+            
+        Value of Test statistic = 12.2385
+  
+    The rejection region is 𝜒2 > 𝜒(.05)(2)
+      𝜒2 > 5.991
+     Reject H0 at 𝛼 = 0.05 
+     Sufficient evidence to say that the two variables are dependent
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
