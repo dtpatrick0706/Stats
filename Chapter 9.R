@@ -123,12 +123,34 @@ example
      Reject H0 at 𝛼 = 0.05 
      Sufficient evidence to say that the two variables are dependent
   
+  example 8.5
+  A researcher wishes to determine whether there is a relationship between the gender of an individual and the 
+  amount of alcohol consumed. A sample of 68 people is selected, and the following data are obtained.
   
   
+                     Alchol Consumption
+  Gender      Low       Moderate      High      Total
+  -----------------------------------------------------
+  Male      10(9.13)      9(9.93)     8(7.94)     27
+  Female    13(13.07)    16(15.07)   12(12.06)    41
+  -----------------------------------------------------
+  Total       23           25          20         68
   
+  At α =.10, can the researcher conclude that alcohol consumption is related to gender?
   
+  H0: Independent                 ## Variables are Gender and Alchol Consumption  ##
+  H1: Dependent
   
+  Test Statistic: 
+            χ2 = ∑ (o-e)2 / e = .028275       ## small test statistic typically means agree with H0 ##
   
+  The Rejection Region:
+             𝜒2 >  𝜒2 (.1,2) = 4.60517
+         
+            Fail to reject H0 at 𝛼 = .10 Therefore Insufficient evidence to say that alchol consumption is 
+            related to gender.
+            
+          
   
   
   
